@@ -16,7 +16,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="text-secondary dark:text-primary">
 		<slot />
 	</body>
 </html>
@@ -47,5 +47,9 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+
+	body {
+		scroll-snap-type: mandatory;
 	}
 </style>
