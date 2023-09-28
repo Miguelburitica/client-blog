@@ -5,8 +5,8 @@ import Header from "../components/Header.astro";
 
 <Layout title="Portfolio">
 	<Header />
-	<main class="flex flex-col justify-center items-center h-screen bg-slate-900">
-		<article class="flex items-center w-full max-w-6xl gap-8">
+	<main class="max-h-screen">
+		<article class="flex items-center w-full max-w-6xl gap-8 h-screen mx-auto">
 			<img class="max-w-md rounded-xl" src="/comic-me.webp" alt="Comical draw of me">
 			<div class="flex flex-col gap-6">
 				<p class="text-base max-w-prose">
@@ -23,14 +23,23 @@ import Header from "../components/Header.astro";
 				</blockquote>
 			</div>
 		</article>
-	</main>
-	<main class="flex flex-col justify-center h-screen bg-slate-600">
-		
-	</main>
-	<main class="flex flex-col justify-center h-screen bg-slate-900">
-		
+		<article class="flex flex-col justify-center h-screen bg-slate-600">
+			
+		</article>
+		<article class="flex flex-col justify-center h-screen bg-slate-900">
+			
+		</article>
 	</main>
 </Layout>
 
 <style>
+
+main {
+	scroll-snap-type: y mandatory;
+	overflow-y: auto;
+}
+
+article {
+	scroll-snap-align: start;
+}
 </style>
