@@ -45,9 +45,9 @@ const ThemeSwitcher = () => {
       {isOpen && (
         <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg dark:bg-slate-900 bg-white ring-1 ring-slate-900 ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
           <div class="py-1" role="none">
-            <button id="menu-option" onClick={() => handleThemeChange({target: {value: 'system'}})} class={`block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-blue-200 dark:hover:bg-tertiary transition-all ${theme === 'system' ? 'bg-blue-500 text-white dark:bg-secondary dark:text-primary' : ''}`} role="menuitem">System</button>
-            <button id="menu-option" onClick={() => handleThemeChange({target: {value: 'dark'}})} class={`block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-blue-200 dark:hover:bg-tertiary transition-all ${theme === 'dark' ? 'bg-blue-500 text-white dark:bg-secondary dark:text-primary' : ''}`} role="menuitem">Dark</button>
-            <button id="menu-option" onClick={() => handleThemeChange({target: {value: 'light'}})} class={`block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-blue-200 dark:hover:bg-tertiary transition-all ${theme === 'light' ? 'bg-blue-500 text-white dark:bg-secondary dark:text-primary' : ''}`} role="menuitem">Light</button>
+            <button id="menu-option" onClick={() => handleThemeChange({target: {value: 'system'}})} class={`block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-teal-50 dark:hover:bg-secondary transition-all ${theme === 'system' ? 'bg-primary dark:bg-tertiary dark:text-primary' : ''}`} role="menuitem">System</button>
+            <button id="menu-option" onClick={() => handleThemeChange({target: {value: 'dark'}})} class={`block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-teal-50 dark:hover:bg-secondary transition-all ${theme === 'dark' ? 'bg-primary dark:bg-tertiary dark:text-primary' : ''}`} role="menuitem">Dark</button>
+            <button id="menu-option" onClick={() => handleThemeChange({target: {value: 'light'}})} class={`block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-teal-50 dark:hover:bg-secondary transition-all ${theme === 'light' ? 'bg-primary dark:bg-tertiary dark:text-primary' : ''}`} role="menuitem">Light</button>
           </div>
         </div>
       )}

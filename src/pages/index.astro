@@ -5,7 +5,7 @@ import Header from "../components/Header.astro";
 
 <Layout title="Portfolio">
 	<Header />
-	<main class="max-h-screen">
+	<main class="max-h-screen bg-slate-50 dark:bg-gray-900">
 		<article class="flex items-center w-full max-w-6xl gap-8 h-screen mx-auto">
 			<img class="max-w-md rounded-xl" src="/comic-me.webp" alt="Comical draw of me">
 			<div class="flex flex-col gap-6">
@@ -14,10 +14,10 @@ import Header from "../components/Header.astro";
 				</p>
 				<!-- quote from Carl Sagan -->
 				<blockquote class="text-base max-w-prose">
-					<p class="text-lg font-semibold text-slate-100">
+					<p class="text-lg font-semibold text-secondary dark:text-slate-100">
 						We are a way for the cosmos to know itself.
 					</p>
-					<footer class="text-base text-slate-300">
+					<footer class="text-base text-tertiary dark:text-slate-300">
 						Carl Sagan
 					</footer>
 				</blockquote>
