@@ -2,21 +2,22 @@
 import ThemeSwitcher from "./ThemeSwitch";
 ---
 
-<nav class="flex justify-center w-full fixed top-0 bg-primary dark:bg-secondary">
+<nav class="flex justify-center w-full fixed top-0 backdrop-blur-sm shadow-md dark:shadow-secondary-200">
 	<div class="flex justify-between items-center max-w-6xl w-full py-4">
 		<h2 class="text-4xl">Miguel</h2>
+		<!-- todo smoth navigation between pages -->
 		<ul class="flex gap-4">
-			<li class="hover:text-tertiary dark:hover:text-primary transition-colors flex items-center justify-center">
-				<a href="/">
+			<li class="hover:text-primary transition-colors flex items-center justify-center">
+				<a href="/#about">
 					Home
 				</a>
 			</li>
-			<li class="hover:text-tertiary dark:hover:text-primary transition-colors flex items-center justify-center">
+			<li class="hover:text-primary transition-colors flex items-center justify-center">
 				<a href="/#projects">
 					Projects
 				</a>
 			</li>
-			<li class="hover:text-tertiary dark:hover:text-primary transition-colors flex items-center justify-center">
+			<li class="hover:text-primary transition-colors flex items-center justify-center">
 				<a href="/interestes">
 					Personal Interests
 				</a>

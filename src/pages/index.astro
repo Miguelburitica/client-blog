@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import ProjectCard from "../components/ProjectCard";
 ---
 
 <Layout title="Portfolio">
 	<Header />
 	<main class="max-h-screen bg-secondary-900 dark:bg-secondary-100">
-		<article class="flex flex-col md:flex-row items-center w-full max-w-6xl gap-8 h-screen mx-auto pt-28 md:px-2 md:pt-0">
+		<section id="about" class="flex flex-col md:flex-row items-center w-full max-w-6xl gap-8 h-screen mx-auto pt-28 md:px-2 md:pt-0">
 			<div class="flex flex-col justify-center items-center w-full max-w-md px-2 md:px-0">
 				<img class="max-w-md w-full rounded-xl mb-5" src="/migue_portfolio.webp" alt="Comical draw of me">
 				<!-- Display a palette of the primary, secondary, tertiary, quaternary and quinary with 5 rectangles -->
@@ -34,13 +35,58 @@ import Header from "../components/Header.astro";
 					</footer>
 				</blockquote>
 			</div>
-		</article>
-		<article class="flex flex-col justify-center h-screen bg-quaternary">
+		</section>
+		<section id="projects" class="flex flex-col justify-center h-screen w-full bg-quaternary-900 dark:bg-quaternary-100">
+			<div class="flex flex-col items-center justify-center w-full max-w-6xl gap-8 h-screen mx-auto pt-28 px-2 md:pt-0">
+				<h2 class="text-4xl font-semibold text-left w-full text-primary">Projects</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi, asperiores molestias natus eaque, fuga explicabo adipisci veniam aliquam error, laudantium illum porro maiores iure dolores ex praesentium molestiae nostrum.</p>
+				<div class="flex flex-col justify-between w-full h-full max-h-[60%] gap-3 md:flex-row">
+					<div class="flex flex-col h-full w-full">
+						<h3 class="text-primary">Backend</h3>
+						<div class="w-full max-h-[80%] overflow-y-auto h-full">
+							<ProjectCard
+								name="example"
+								technologies={["NodeJS", "Express", "MongoDB", "Mongoose"]}
+								githubUrl="https://github.com/Miguelburitica/deno-server"
+								demoUrl="https://deno-server-option.deno.dev/"
+								image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
+								coverImage="https://caferati.me/images/portfolio/sky-go-desktop/hover.jpg"
+								client:only
+							/>
+							<br>
+							<ProjectCard
+								name="example"
+								technologies={["NodeJS", "Express", "MongoDB", "Mongoose"]}
+								githubUrl="https://github.com/Miguelburitica/deno-server"
+								demoUrl="https://deno-server-option.deno.dev/"
+								image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
+								coverImage="https://caferati.me/images/portfolio/sky-go-desktop/hover.jpg"
+								client:only
+							/>
+							<br>
+							<ProjectCard
+								name="example"
+								technologies={["NodeJS", "Express", "MongoDB", "Mongoose"]}
+								githubUrl="https://github.com/Miguelburitica/deno-server"
+								demoUrl="https://deno-server-option.deno.dev/"
+								image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
+								coverImage="https://caferati.me/images/portfolio/sky-go-desktop/hover.jpg"
+								client:only
+							/>
+						</div>
+					</div>
+					<div class="flex flex-col h-full w-full">
+						<h3 class="text-primary">Frontend</h3>
+						<div class="w-full max-h-[80%] overflow-y-auto h-full">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="flex flex-col justify-center h-screen bg-quinary-900 dark:bg-quinary-100">
 			
-		</article>
-		<article class="flex flex-col justify-center h-screen bg-quinary">
-			
-		</article>
+		</section>
 	</main>
 </Layout>
 
@@ -51,7 +97,7 @@ main {
 	overflow-y: auto;
 }
 
-article {
+section {
 	scroll-snap-align: start;
 }
 </style>
