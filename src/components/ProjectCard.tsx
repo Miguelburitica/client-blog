@@ -1,10 +1,15 @@
 import { h } from 'preact'
-import { useEffect, useState } from 'preact/hooks'
+import { useState } from 'preact/hooks'
+
+interface Technology {
+  name: string
+  color: string
+}
 
 // get props from parent
 interface Props {
   name: string
-  technologies: string[]
+  technologies: Technology[]
   githubUrl: string
   demoUrl: string
   image: string
@@ -25,12 +30,15 @@ export default function ProjectCard({image, coverImage, name, githubUrl, demoUrl
     setIsHovered(false)
   }
   return (
-    <article class="flex aspect-video rounded-md overflow-hidden relative" id="project-card" onMouseOver={hoverIn} onMouseLeave={hoverOut}>
+    <article class="flex aspect-video rounded-lg overflow-hidden relative" id="project-card" onMouseOver={hoverIn} onMouseLeave={hoverOut}>
       <div className="flex gap-4 flex-wrap items-center justify-center">
         ({technologies.map((technology, index) => (
-          <span style={`transition-delay: ${index * 70}ms`} class={`text-xs text-secondary-300 bg-primary dark:bg-tertiary dark:text-primary px-2 py-1 rounded-sm transition-all duration-500 ease-in-out z-10 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`}>
-            {technology}
-            {index}
+          <span style={`transition-delay: ${index * 70}ms`} class={`transition-all duration-500 ease-in-out z-10 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`}>
+            <div
+              class={`[word-wrap: break-word] my-[5px] mr-4 flex h-[32px] cursor-pointer items-center justify-between rounded-[16px] border-2 border-${technology.color}-800 bg-transparent px-[12px] py-0 text-[13px] font-normal normal-case leading-loose shadow-none transition-[opacity] duration-300 ease-linear hover:border-${technology.color}-700 hover:!shadow-none`}
+            >
+              { technology.name }
+            </div>
           </span>
         ))})
       </div>

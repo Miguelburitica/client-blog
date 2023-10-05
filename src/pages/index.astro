@@ -36,7 +36,7 @@ import ProjectCard from "../components/ProjectCard";
 				</blockquote>
 			</div>
 		</section>
-		<section id="projects" class="flex flex-col justify-center h-screen w-full bg-quaternary-900 dark:bg-quaternary-100">
+		<section id="projects" class="flex flex-col justify-center h-screen w-full bg-primary-900 dark:bg-secondary-200">
 			<div class="flex flex-col items-center justify-center w-full max-w-6xl gap-8 h-screen mx-auto pt-28 px-2 md:pt-0">
 				<h2 class="text-4xl font-semibold text-left w-full text-primary">Projects</h2>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi, asperiores molestias natus eaque, fuga explicabo adipisci veniam aliquam error, laudantium illum porro maiores iure dolores ex praesentium molestiae nostrum.</p>
@@ -46,7 +46,12 @@ import ProjectCard from "../components/ProjectCard";
 						<div class="w-full max-h-[80%] overflow-y-auto h-full">
 							<ProjectCard
 								name="example"
-								technologies={["NodeJS", "Express", "MongoDB", "Mongoose"]}
+								technologies={[
+									{name: "NodeJS", color: "green"},
+									{name: "Express", color: "blue"},
+									{name: "MongoDB", color: "green"},
+									{name: "Mongoose", color: "blue"}
+								]}
 								githubUrl="https://github.com/Miguelburitica/deno-server"
 								demoUrl="https://deno-server-option.deno.dev/"
 								image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
@@ -56,7 +61,7 @@ import ProjectCard from "../components/ProjectCard";
 							<br>
 							<ProjectCard
 								name="example"
-								technologies={["NodeJS", "Express", "MongoDB", "Mongoose"]}
+								technologies={[{name: "NodeJS", color: "yellow"}, {name: "Express", color: "blue"}, {name: "MongoDB", color: "green"}, {name: "Mongoose", color: "blue"}]}
 								githubUrl="https://github.com/Miguelburitica/deno-server"
 								demoUrl="https://deno-server-option.deno.dev/"
 								image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
@@ -66,7 +71,7 @@ import ProjectCard from "../components/ProjectCard";
 							<br>
 							<ProjectCard
 								name="example"
-								technologies={["NodeJS", "Express", "MongoDB", "Mongoose"]}
+								technologies={[{name: "NodeJS", color: "green"}, {name: "Express", color: "blue"}, {name: "MongoDB", color: "green"}, {name: "Mongoose", color: "blue"}]}
 								githubUrl="https://github.com/Miguelburitica/deno-server"
 								demoUrl="https://deno-server-option.deno.dev/"
 								image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
@@ -84,7 +89,7 @@ import ProjectCard from "../components/ProjectCard";
 				</div>
 			</div>
 		</section>
-		<section class="flex flex-col justify-center h-screen bg-quinary-900 dark:bg-quinary-100">
+		<section class="flex flex-col justify-center h-screen bg-secondary-900 dark:bg-secondary-100">
 			
 		</section>
 	</main>
