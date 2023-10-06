@@ -7,90 +7,89 @@ import ProjectCard from "../components/ProjectCard";
 <Layout title="Portfolio">
 	<Header />
 	<main class="max-h-screen bg-secondary-900 dark:bg-secondary-100">
-		<section id="about" class="flex flex-col md:flex-row items-center w-full max-w-6xl gap-8 h-screen mx-auto pt-28 md:px-2 md:pt-0">
-			<div class="flex flex-col justify-center items-center w-full max-w-md px-2 md:px-0">
-				<img class="max-w-md w-full rounded-xl mb-5" src="/migue_portfolio.webp" alt="Comical draw of me">
-				<!-- Display a palette of the primary, secondary, tertiary, quaternary and quinary with 5 rectangles -->
-				<label class="self-start text-2xl font-semibold mb-2">Color palette</label>
-				<ul class="flex justify-between w-full gap-3">
-					<li class="bg-primary w-20 h-12 rounded-sm"></li>
-					<li class="bg-secondary w-20 h-12 rounded-sm"></li>
-					<li class="bg-tertiary w-20 h-12 rounded-sm"></li>
-					<li class="bg-quaternary w-20 h-12 rounded-sm"></li>
-					<li class="bg-quinary w-20 h-12 rounded-sm"></li>
-				</ul>
-			</div>
-			
-			<div class="flex flex-col gap-6 w-full items-end max-w-lg px-2 md:px-0">
-				<p class="text-base max-w-prose">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, consequuntur, accusantium, omnis nobis quae eius ut earum molestias cumque expedita beatae ab doloremque illo hic. Nostrum corrupti iste soluta harum.
-				</p>
-				<!-- quote from Carl Sagan -->
-				<blockquote class="text-base max-w-prose">
-					<p class="text-lg font-semibold text-secondary dark:text-slate-100">
-						We are a way for the cosmos to know itself.
+		<section id="about" class="flex flex-col justify-center h-screen w-full bg-primary-900 dark:bg-secondary-100">
+			<div class="flex flex-col md:flex-row items-center w-full max-w-6xl gap-8 h-screen mx-auto pt-28 md:px-2 md:pt-0">
+				<div class="flex flex-col justify-center items-center w-full max-w-md px-2 md:px-0">
+					<img class="max-w-md w-full rounded-xl mb-5" src="/migue_portfolio.webp" alt="Comical draw of me">
+					<!-- Display a palette of the primary, secondary, tertiary, quaternary and quinary with 5 rectangles -->
+					<label class="self-start text-2xl font-semibold mb-2">Color palette</label>
+					<ul class="flex justify-between w-full gap-3">
+						<li class="bg-primary w-20 h-12 rounded-sm"></li>
+						<li class="bg-secondary w-20 h-12 rounded-sm"></li>
+						<li class="bg-tertiary w-20 h-12 rounded-sm"></li>
+						<li class="bg-quaternary w-20 h-12 rounded-sm"></li>
+						<li class="bg-quinary w-20 h-12 rounded-sm"></li>
+					</ul>
+				</div>
+				
+				<div class="flex flex-col gap-6 w-full items-end max-w-lg px-2 md:px-0">
+					<p class="text-base max-w-prose">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, consequuntur, accusantium, omnis nobis quae eius ut earum molestias cumque expedita beatae ab doloremque illo hic. Nostrum corrupti iste soluta harum.
 					</p>
-					<footer class="text-base text-tertiary dark:text-slate-300">
-						Carl Sagan
-					</footer>
-				</blockquote>
+					<!-- quote from Carl Sagan -->
+					<blockquote class="text-base max-w-prose">
+						<p class="text-lg font-semibold text-secondary dark:text-slate-100">
+							We are a way for the cosmos to know itself.
+						</p>
+						<footer class="text-base text-tertiary dark:text-slate-300">
+							Carl Sagan
+						</footer>
+					</blockquote>
+				</div>
 			</div>
 		</section>
-		<section id="projects" class="flex flex-col justify-center h-screen w-full bg-primary-900 dark:bg-secondary-200">
+		<section id="projects" class="flex flex-col justify-center h-screen w-full bg-primary-800 dark:bg-secondary-200">
 			<div class="flex flex-col items-center justify-center w-full max-w-6xl gap-8 h-screen mx-auto pt-28 px-2 md:pt-0">
-				<h2 class="text-4xl font-semibold text-left w-full text-primary">Projects</h2>
+				<h2 class="text-4xl font-semibold text-left w-full text-secondary-300 dark:text-white">Projects</h2>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi, asperiores molestias natus eaque, fuga explicabo adipisci veniam aliquam error, laudantium illum porro maiores iure dolores ex praesentium molestiae nostrum.</p>
-				<div class="flex flex-col justify-between w-full h-full max-h-[60%] gap-3 md:flex-row">
-					<div class="flex flex-col h-full w-full">
-						<h3 class="text-primary">Backend</h3>
-						<div class="w-full max-h-[80%] overflow-y-auto h-full">
-							<ProjectCard
-								name="example"
-								technologies={[
-									{name: "NodeJS", color: "green"},
-									{name: "Express", color: "blue"},
-									{name: "MongoDB", color: "green"},
-									{name: "Mongoose", color: "blue"}
-								]}
-								githubUrl="https://github.com/Miguelburitica/deno-server"
-								demoUrl="https://deno-server-option.deno.dev/"
-								image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
-								coverImage="https://caferati.me/images/portfolio/sky-go-desktop/hover.jpg"
-								client:only
-							/>
-							<br>
-							<ProjectCard
-								name="example"
-								technologies={[{name: "NodeJS", color: "yellow"}, {name: "Express", color: "blue"}, {name: "MongoDB", color: "green"}, {name: "Mongoose", color: "blue"}]}
-								githubUrl="https://github.com/Miguelburitica/deno-server"
-								demoUrl="https://deno-server-option.deno.dev/"
-								image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
-								coverImage="https://caferati.me/images/portfolio/sky-go-desktop/hover.jpg"
-								client:only
-							/>
-							<br>
-							<ProjectCard
-								name="example"
-								technologies={[{name: "NodeJS", color: "green"}, {name: "Express", color: "blue"}, {name: "MongoDB", color: "green"}, {name: "Mongoose", color: "blue"}]}
-								githubUrl="https://github.com/Miguelburitica/deno-server"
-								demoUrl="https://deno-server-option.deno.dev/"
-								image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
-								coverImage="https://caferati.me/images/portfolio/sky-go-desktop/hover.jpg"
-								client:only
-							/>
-						</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-2 w-full h-full max-h-[65%] overflow-y-auto pt-2">
+					<div class="col-span-1 aspect-video">
+						<ProjectCard
+							stack="front"
+							name="example"
+							technologies={[
+								{name: "NodeJS", color: "green"},
+								{name: "Express", color: "blue"},
+								{name: "MongoDB", color: "green"},
+								{name: "Mongoose", color: "blue"}
+							]}
+							githubUrl="https://github.com/Miguelburitica/deno-server"
+							demoUrl="https://deno-server-option.deno.dev/"
+							image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
+							coverImage="https://caferati.me/images/portfolio/sky-go-desktop/hover.jpg"
+							client:only
+						/>
 					</div>
-					<div class="flex flex-col h-full w-full">
-						<h3 class="text-primary">Frontend</h3>
-						<div class="w-full max-h-[80%] overflow-y-auto h-full">
-
-						</div>
+					<div class="col-span-1 aspect-video">
+						<ProjectCard
+							stack="back"
+							name="example"
+							technologies={[{name: "NodeJS", color: "yellow"}, {name: "Express", color: "blue"}, {name: "MongoDB", color: "green"}, {name: "Mongoose", color: "blue"}]}
+							githubUrl="https://github.com/Miguelburitica/deno-server"
+							demoUrl="https://deno-server-option.deno.dev/"
+							image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
+							coverImage="https://caferati.me/images/portfolio/sky-go-desktop/hover.jpg"
+							client:only
+						/>
+					</div>
+					<div class="col-span-1 aspect-video">
+						<ProjectCard
+							stack="back"
+							name="example"
+							technologies={[{name: "NodeJS", color: "green"}, {name: "Express", color: "blue"}, {name: "MongoDB", color: "green"}, {name: "Mongoose", color: "blue"}]}
+							githubUrl="https://github.com/Miguelburitica/deno-server"
+							demoUrl="https://deno-server-option.deno.dev/"
+							image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
+							coverImage="https://caferati.me/images/portfolio/sky-go-desktop/hover.jpg"
+							client:only
+						/>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="flex flex-col justify-center h-screen bg-secondary-900 dark:bg-secondary-100">
-			
+		<section class="flex flex-col justify-center h-screen w-full bg-primary-900 dark:bg-secondary-100">
+			<div class="flex flex-col md:flex-row items-center w-full max-w-6xl gap-8 h-screen mx-auto pt-28 md:px-2 md:pt-0">
+			</div>
 		</section>
 	</main>
 </Layout>
