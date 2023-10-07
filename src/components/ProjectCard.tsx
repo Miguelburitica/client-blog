@@ -33,7 +33,7 @@ export default function ProjectCard({image, coverImage, name, githubUrl, demoUrl
   }
   
   return (
-    <article class={`flex aspect-video rounded-lg overflow-hidden shadow-sm relative border-2 ${stack === 'front' ? ' border-emerald-400' : ' border-sky-400'}`} id="project-card" onMouseOver={hoverIn} onMouseLeave={hoverOut}>
+    <article class={`flex aspect-video rounded-lg overflow-hidden shadow-sm relative border-2 ${stack === 'front' ? ' border-primary-400' : ' border-secondary-400'}`} id="project-card" onMouseOver={hoverIn} onMouseLeave={hoverOut}>
       <div className="flex gap-4 flex-wrap items-center justify-start w-full h-fit mt-auto mb-2 pl-2">
         {technologies.map((technology, index) => (
           <span style={`transition-delay: ${index * 70}ms`} class={`transition-all duration-500 ease-in-out z-10 h-fit ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`}>
@@ -49,7 +49,7 @@ export default function ProjectCard({image, coverImage, name, githubUrl, demoUrl
         <img class="w-6 aspect-square" src="github-mark-white.svg" alt="" />
         <img class="h-6" src="GitHub_Logo_White.png" alt="" srcset="" />
       </button>
-      <span class={`absolute left-1/2 top-0 -translate-x-1/2 rounded-md rounded-t-none px-6 border-2 border-t-0 text-secondary-200 dark:text-white font-medium ${stack === 'front' ? 'bg-emerald-200 dark:bg-emerald-700 border-emerald-400' : 'bg-sky-200 dark:bg-sky-700 border-sky-400'}`}>
+      <span class={`absolute left-1/2 top-0 -translate-x-1/2 rounded-md rounded-t-none px-6 border-2 border-t-0 text-secondary-200 dark:text-white  font-medium ${stack === 'front' ? 'dark:bg-primary-200 bg-primary-700 border-primary-400' : 'dark:bg-secondary-200 bg-secondary-700 border-secondary-400'}`}>
         { stack === 'front' ? 'Front-end' : 'Back-end'}
       </span>
     </article>
