@@ -7,7 +7,7 @@ import ProjectCard from "../components/ProjectCard";
 <Layout title="Portfolio">
 	<Header client:only="preact" />
 	<main class="max-h-screen bg-secondary-900 dark:bg-secondary-100">
-		<section id="about" class="flex flex-col justify-center h-screen w-full bg-primary-900 dark:bg-secondary-100">
+		<section id="about" class="flex flex-col justify-center h-screen w-full bg-primary-900 dark:bg-secondary-100 overflow-y-auto">
 			<div class="flex flex-col md:flex-row items-center w-full max-w-6xl gap-8 h-screen mx-auto pt-28 md:px-2 md:pt-0">
 				<div class="flex flex-col justify-center items-center w-full max-w-md px-2 md:px-0">
 					<img class="max-w-md w-full rounded-xl mb-5" src="/migue_portfolio.webp" alt="Comical draw of me">
@@ -38,11 +38,55 @@ import ProjectCard from "../components/ProjectCard";
 				</div>
 			</div>
 		</section>
-		<section id="projects" class="flex flex-col justify-center h-screen w-full bg-primary-800 dark:bg-secondary-200">
-			<div class="flex flex-col items-center justify-center w-full max-w-6xl gap-8 h-screen mx-auto pt-28 px-2 md:pt-0">
+		<section id="projects" class="flex flex-col justify-start items-start h-screen w-full pt-24 pb-4 bg-primary-800 dark:bg-secondary-200 overflow-y-auto">
+			<div class="w-full max-w-6xl gap-8 mx-auto px-2 md:pt-0">
 				<h2 class="text-4xl font-semibold text-left w-full text-secondary-300 dark:text-white">Projects</h2>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi, asperiores molestias natus eaque, fuga explicabo adipisci veniam aliquam error, laudantium illum porro maiores iure dolores ex praesentium molestiae nostrum.</p>
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-2 w-full h-full max-h-[65%] overflow-y-auto pt-2">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-2 w-full h-fit pt-2">
+					<div class="col-span-1 aspect-video z-0">
+						<ProjectCard
+							stack="front"
+							name="example"
+							technologies={[
+								{name: "NodeJS", color: "green"},
+								{name: "Express", color: "blue"},
+								{name: "MongoDB", color: "green"},
+								{name: "MongoDB", color: "green"},
+								{name: "MongoDB", color: "green"},
+								{name: "MongoDB", color: "green"},
+								{name: "MongoDB", color: "green"},
+								{name: "MongoDB", color: "green"},
+								{name: "Mongoose", color: "blue"}
+							]}
+							githubUrl="https://github.com/Miguelburitica/deno-server"
+							demoUrl="https://deno-server-option.deno.dev/"
+							image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
+							coverImage="https://caferati.me/images/portfolio/sky-go-desktop/hover.jpg"
+							client:only
+						/>
+					</div>
+					<div class="col-span-1 aspect-video">
+						<ProjectCard
+							stack="front"
+							name="example"
+							technologies={[
+								{name: "NodeJS", color: "green"},
+								{name: "Express", color: "blue"},
+								{name: "MongoDB", color: "green"},
+								{name: "MongoDB", color: "green"},
+								{name: "MongoDB", color: "green"},
+								{name: "MongoDB", color: "green"},
+								{name: "MongoDB", color: "green"},
+								{name: "MongoDB", color: "green"},
+								{name: "Mongoose", color: "blue"}
+							]}
+							githubUrl="https://github.com/Miguelburitica/deno-server"
+							demoUrl="https://deno-server-option.deno.dev/"
+							image="https://caferati.me/images/portfolio/sky-go-desktop/list.jpg"
+							coverImage="https://caferati.me/images/portfolio/sky-go-desktop/hover.jpg"
+							client:only
+						/>
+					</div>
 					<div class="col-span-1 aspect-video">
 						<ProjectCard
 							stack="front"
