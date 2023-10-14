@@ -10,7 +10,7 @@ export default function Header() {
 	
 	return (
 		<nav class="flex justify-center w-full fixed backdrop-blur-sm top-0 shadow-md dark:shadow-secondary-200 px-2 z-10">
-			<div class="flex justify-between items-center max-w-6xl w-full py-4">
+			<div class="flex justify-between items-center max-w-6xl w-full py-2">
 				<h2 class="text-4xl">Miguel</h2>
 				<ul class=" hidden md:flex gap-4">
 					<li class="hover:text-primary transition-colors flex items-center justify-center">
